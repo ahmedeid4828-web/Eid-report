@@ -16,7 +16,7 @@
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%); /* Soft clean gradient like Just Clean app */
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%); /* White gradient for clean look */
             color: #333;
             line-height: 1.6;
             padding: 20px;
@@ -26,11 +26,11 @@
             margin: 0 auto;
             background: white;
             border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            box-shadow: 0 10px 30px rgba(156, 39, 176, 0.1); /* Subtle purple shadow */
             overflow: hidden;
         }
         header {
-            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); /* Green gradient matching Just Clean's fresh theme */
+            background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); /* Purple gradient for header */
             color: white;
             padding: 30px;
             text-align: center;
@@ -73,7 +73,7 @@
             width: 90%;
         }
         .password-box h2 {
-            color: #4CAF50; /* Green for Just Clean */
+            color: #9C27B0; /* Purple */
             margin-bottom: 20px;
             font-size: 1.8em;
         }
@@ -87,11 +87,11 @@
             text-align: center;
         }
         .password-box input:focus {
-            border-color: #4CAF50; /* Green focus */
+            border-color: #9C27B0; /* Purple focus */
             outline: none;
         }
         .login-btn {
-            background: #4CAF50; /* Green button */
+            background: #9C27B0; /* Purple button */
             color: white;
             border: none;
             padding: 15px 30px;
@@ -101,21 +101,21 @@
             transition: background 0.3s;
         }
         .login-btn:hover {
-            background: #2E7D32; /* Darker green hover */
+            background: #7B1FA2; /* Darker purple hover */
         }
         /* Form Section */
         .form-section {
             padding: 40px;
-            background: #f8f9fa;
+            background: white; /* White background */
         }
         .form-section h2 {
-            color: #4CAF50; /* Green headers */
+            color: #9C27B0; /* Purple headers */
             margin-bottom: 20px;
             font-size: 1.8em;
             text-align: center;
         }
         .issue-type-label {
-            color: #4CAF50;
+            color: #9C27B0;
             font-weight: 600;
             font-size: 1.1em;
             margin-bottom: 5px;
@@ -141,14 +141,15 @@
             border-radius: 8px;
             font-size: 1em;
             transition: border-color 0.3s;
+            background: white; /* White inputs */
         }
         input:focus, select:focus {
-            border-color: #4CAF50; /* Green focus */
+            border-color: #9C27B0; /* Purple focus */
             outline: none;
         }
         .submit-btn {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); /* Green gradient for submit */
+            background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); /* Purple gradient for submit */
             color: white;
             border: none;
             padding: 15px;
@@ -160,20 +161,21 @@
         }
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3); /* Green shadow */
+            box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3); /* Purple shadow */
         }
         /* Table Section */
         .table-section {
             padding: 40px;
+            background: white; /* White background */
         }
         .table-section h2 {
-            color: #4CAF50; /* Green headers */
+            color: #9C27B0; /* Purple headers */
             margin-bottom: 20px;
             font-size: 1.8em;
             text-align: center;
         }
         .export-btn {
-            background: #2196F3; /* Blue for export, accent color */
+            background: #9C27B0; /* Purple for export */
             color: white;
             border: none;
             padding: 12px 25px;
@@ -187,7 +189,7 @@
             gap: 8px;
         }
         .export-btn:hover {
-            background: #1976D2; /* Darker blue hover */
+            background: #7B1FA2; /* Darker purple */
         }
         table {
             width: 100%;
@@ -203,15 +205,15 @@
             border-bottom: 1px solid #ddd;
         }
         th {
-            background: #4CAF50; /* Green table header */
+            background: #9C27B0; /* Purple table header */
             color: white;
             font-weight: 500;
         }
         tr:hover {
-            background: #e8f5e8; /* Light green hover */
+            background: #F3E5F5; /* Very light purple hover */
         }
         tr:nth-child(even) {
-            background: #f8f9fa;
+            background: #FAFAFA; /* Light white/gray */
         }
         /* Responsive for Mobile */
         @media (max-width: 768px) {
@@ -226,7 +228,7 @@
                 font-size: 2em;
             }
         }
-        /* Success/Error Messages */
+        /* Success/Error Messages (Purple-tinted for theme) */
         .alert {
             padding: 15px;
             border-radius: 8px;
@@ -235,14 +237,14 @@
             font-weight: 500;
         }
         .alert-success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background: #E1BEE7; /* Light purple success */
+            color: #4A148C;
+            border: 1px solid #CE93D8;
         }
         .alert-error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+            background: #FFCDD2; /* Light red for errors (minimal, as per white theme) */
+            color: #C62828;
+            border: 1px solid #EF9A9A;
         }
     </style>
 </head>
@@ -387,7 +389,7 @@
                     <td>${report.country}</td>
                     <td>${report.orderNumber}</td>
                     <td>${report.date}</td>
-                    <td><button onclick="deleteReport(${report.id})" style="background:#f44336;color:white;border:none;padding:5px 10px;border-radius:5px;cursor:pointer;"><i class="fas fa-trash"></i> Delete</button></td>
+                    <td><button onclick="deleteReport(${report.id})" style="background:#F44336;color:white;border:none;padding:5px 10px;border-radius:5px;cursor:pointer;"><i class="fas fa-trash"></i> Delete</button></td>
                 `;
             });
         }
